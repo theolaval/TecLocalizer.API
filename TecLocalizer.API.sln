@@ -2,6 +2,12 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TecLocalizer.API", "TecLocalizer.API\TecLocalizer.API.csproj", "{71E4061D-F3E0-4E0D-8E1E-F8B02C8017A9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TecLocalizer.BLL", "TecLocalizer.BLL\TecLocalizer.BLL.csproj", "{A5A349C8-430F-4766-A81D-A376AFE49ACB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TecLocalizer.DAL", "TecLocalizer.DAL\TecLocalizer.DAL.csproj", "{78CE8E2D-43F3-4679-A2AA-4DC39086288F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TecLocalizer.DL", "TecLocalizer.DL\TecLocalizer.DL.csproj", "{A4A0273D-8C45-47C2-B8D4-482A0C323AEC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +18,17 @@ Global
 		{71E4061D-F3E0-4E0D-8E1E-F8B02C8017A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71E4061D-F3E0-4E0D-8E1E-F8B02C8017A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71E4061D-F3E0-4E0D-8E1E-F8B02C8017A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5A349C8-430F-4766-A81D-A376AFE49ACB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5A349C8-430F-4766-A81D-A376AFE49ACB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5A349C8-430F-4766-A81D-A376AFE49ACB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5A349C8-430F-4766-A81D-A376AFE49ACB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78CE8E2D-43F3-4679-A2AA-4DC39086288F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78CE8E2D-43F3-4679-A2AA-4DC39086288F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78CE8E2D-43F3-4679-A2AA-4DC39086288F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78CE8E2D-43F3-4679-A2AA-4DC39086288F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4A0273D-8C45-47C2-B8D4-482A0C323AEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4A0273D-8C45-47C2-B8D4-482A0C323AEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4A0273D-8C45-47C2-B8D4-482A0C323AEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4A0273D-8C45-47C2-B8D4-482A0C323AEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

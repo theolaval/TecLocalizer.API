@@ -1,0 +1,6 @@
+@TecLocalizer.DAL_HostAddress = http://localhost:5296
+
+GET {{TecLocalizer.DAL_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

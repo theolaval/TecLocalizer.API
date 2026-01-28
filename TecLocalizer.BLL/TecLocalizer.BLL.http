@@ -1,0 +1,6 @@
+@TecLocalizer.BLL_HostAddress = http://localhost:5155
+
+GET {{TecLocalizer.BLL_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
