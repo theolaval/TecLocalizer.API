@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TecLocalizer.DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f7d257f20026383ae11bf2f47a1ad1249ee6e1e1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+41494bdfb96ac60b44cfedaeb0c8b24b58f29dd1")]
 [assembly: System.Reflection.AssemblyProductAttribute("TecLocalizer.DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TecLocalizer.DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
