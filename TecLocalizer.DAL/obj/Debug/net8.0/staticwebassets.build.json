@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "qM067IbJJFLcF/xNTB1EivUvyCDUnKpBbCxKqD4SAHI=",
+  "Source": "TecLocalizer.DAL",
+  "BasePath": "_content/TecLocalizer.DAL",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "E:\\Projects\\TecLocalizer.API\\TecLocalizer.DL\\TecLocalizer.DL.csproj",
+      "Version": 2,
+      "Source": "TecLocalizer.DL",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

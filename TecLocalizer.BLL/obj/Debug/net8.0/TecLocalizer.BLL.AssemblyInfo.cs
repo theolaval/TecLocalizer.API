@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TecLocalizer.BLL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+41494bdfb96ac60b44cfedaeb0c8b24b58f29dd1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ff6803b3a70c55eabdc0a38f41a50df2ebe8bfe3")]
 [assembly: System.Reflection.AssemblyProductAttribute("TecLocalizer.BLL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TecLocalizer.BLL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

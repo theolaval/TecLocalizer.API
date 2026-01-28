@@ -1,6 +1,8 @@
-﻿namespace TecLocalizer.DAL.Repositories.Interfaces;
+﻿using TecLocalizer.DL.Models;
 
-public class IVehicleRepository
+namespace TecLocalizer.DAL.Repositories.Interfaces;
+
+public interface IVehicleRepository
 {
-    
+    Task<List<VehiclePosition>> GetLiveVehiclesAsync();
 }

@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "TE9jbWVmeCY=",
+  "dgSpecHash": "YV1wqhBI4eY=",
   "success": true,
   "projectFilePath": "E:\\Projects\\TecLocalizer.API\\TecLocalizer.API\\TecLocalizer.API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.3.0\\microsoft.aspnetcore.authentication.abstractions.2.3.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.authorization\\2.3.0\\microsoft.aspnetcore.authorization.2.3.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.authorization.policy\\2.3.0\\microsoft.aspnetcore.authorization.policy.2.3.0.nupkg.sha512",
@@ -25,6 +27,7 @@
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.signalr.protocols.json\\1.2.0\\microsoft.aspnetcore.signalr.protocols.json.1.2.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.websockets\\2.3.0\\microsoft.aspnetcore.websockets.2.3.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.webutilities\\2.3.0\\microsoft.aspnetcore.webutilities.2.3.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.23\\microsoft.entityframeworkcore.8.0.23.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.23\\microsoft.entityframeworkcore.abstractions.8.0.23.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.23\\microsoft.entityframeworkcore.analyzers.8.0.23.nupkg.sha512",

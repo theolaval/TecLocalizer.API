@@ -1,5 +1,4 @@
 ﻿namespace TecLocalizer.DL.Models;
-
 public class VehiclePosition
 {
     public string VehicleId { get; set; } = string.Empty;

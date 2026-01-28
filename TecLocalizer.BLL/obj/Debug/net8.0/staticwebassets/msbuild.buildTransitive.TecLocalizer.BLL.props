@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\TecLocalizer.BLL.props" />
+</Project>

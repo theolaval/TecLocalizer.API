@@ -1,6 +1,12 @@
-﻿namespace TecLocalizer.API.Hubs;
+﻿using Microsoft.AspNetCore.SignalR;
+using TecLocalizer.API.DTOs;
 
-public class VehicleHub
+namespace TecLocalizer.API.Hubs;
+
+public class VehicleHub : Hub
 {
-    
+    public async Task SendVehicles(List<VehicleDto> vehicles)
+    {
+        await Clients.All.SendAsync("VehiclesUpdated", vehicles);
+    }
 }
