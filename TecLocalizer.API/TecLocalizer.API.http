@@ -1,0 +1,6 @@
+@TecLocalizer.API_HostAddress = http://localhost:5210
+
+GET {{TecLocalizer.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
