@@ -1,4 +1,4 @@
-﻿namespace TecLocalizer.API.DTOs;
+namespace TecLocalizer.BLL.DTOs;
 
 public class VehicleDto
 {
@@ -7,4 +7,7 @@ public class VehicleDto
     public double Latitude { get; set; }
     public double Longitude { get; set; }
     public double Speed { get; set; }
+    public int DelayMinutes { get; set; }
+    public string Province { get; set; } = "All";
+    public DateTime UpdatedAt { get; set; }
 }

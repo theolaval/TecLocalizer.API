@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "BFNayXYra4nk9cLo0s5YjZG1fmUY3/P+H0RLmpk+CT0=",
+  "Hash": "2rXaSygP6oKucL+WxRZpFNG9CIFcFu1fVBKeijzaaOs=",
   "Source": "TecLocalizer.BLL",
   "BasePath": "_content/TecLocalizer.BLL",
   "Mode": "Default",
@@ -11,10 +11,10 @@
       "Version": 2,
       "Source": "TecLocalizer.DAL",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
-      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishProperties": "",
       "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
       "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
-      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildProperties": "",
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
     },
     {
@@ -22,10 +22,10 @@
       "Version": 2,
       "Source": "TecLocalizer.DL",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
-      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishProperties": "",
       "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
       "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
-      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildProperties": "",
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
     }
   ],

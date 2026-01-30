@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qM067IbJJFLcF/xNTB1EivUvyCDUnKpBbCxKqD4SAHI=",
+  "Hash": "IrFTlI8xDV87jbjURTvSJLDkrhtMNWbYc+QZzAgK0Ww=",
   "Source": "TecLocalizer.DAL",
   "BasePath": "_content/TecLocalizer.DAL",
   "Mode": "Default",
@@ -11,10 +11,10 @@
       "Version": 2,
       "Source": "TecLocalizer.DL",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
-      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishProperties": "",
       "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
       "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
-      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildProperties": "",
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
     }
   ],

@@ -1,0 +1,65 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database (optionnel)
+  postgres:
+    image: postgres:15-alpine
+    container_name: teclocalizer-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: teclocalizer
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Redis Cache (optionnel)
+  redis:
+    image: redis:7-alpine
+    container_name: teclocalizer-cache
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # TEC Localizer API
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: teclocalizer-api
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ConnectionStrings__DefaultConnection: "Host=postgres;Port=5432;Database=teclocalizer;Username=postgres;Password=postgres"
+      # Redis optionnel:
+      # Cache__Type: Redis
+      # Cache__ConnectionString: "redis:6379"
+    ports:
+      - "5000:5000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/api/vehicles/stats/summary"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 10s
+
+volumes:
+  postgres_data:
+
+networks:
+  default:
+    name: teclocalizer-network

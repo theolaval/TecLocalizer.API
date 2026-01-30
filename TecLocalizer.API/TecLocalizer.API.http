@@ -1,6 +1,52 @@
-@TecLocalizer.API_HostAddress = http://localhost:5210
-
-GET {{TecLocalizer.API_HostAddress}}/weatherforecast/
-Accept: application/json
+@baseUrl = http://localhost:5000
+@apiVersion = /api
 
 ###
+# ==================== ARRÊTS ====================
+
+### Récupérer TOUS les arrêts
+GET {{baseUrl}}{{apiVersion}}/stops
+
+###
+# Récupérer les arrêts d'une province spécifique
+GET {{baseUrl}}{{apiVersion}}/stops?province=Liege
+
+###
+# Arrêts de Namur
+GET {{baseUrl}}{{apiVersion}}/stops/Namur
+
+###
+# Arrêts du Hainaut
+GET {{baseUrl}}{{apiVersion}}/stops/Hainaut
+
+###
+# Arrêts du Brabant Wallon
+GET {{baseUrl}}{{apiVersion}}/stops/BrabantWallon
+
+###
+# Arrêts du Luxembourg
+GET {{baseUrl}}{{apiVersion}}/stops/Luxembourg
+
+###
+# ==================== VÉHICULES ====================
+
+### Récupérer TOUS les bus (positions actuelles)
+GET {{baseUrl}}{{apiVersion}}/vehicles
+
+###
+# Bus d'une province spécifique
+GET {{baseUrl}}{{apiVersion}}/vehicles?province=Liege
+
+###
+# Bus de Namur
+GET {{baseUrl}}{{apiVersion}}/vehicles/Namur
+
+###
+# Bus du Hainaut
+GET {{baseUrl}}{{apiVersion}}/vehicles/Hainaut
+
+###
+# ==================== STATISTIQUES ====================
+
+### Statistiques globales des véhicules
+GET {{baseUrl}}{{apiVersion}}/vehicles/stats/summary

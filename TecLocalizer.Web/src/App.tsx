@@ -1,93 +1,52 @@
-import { useEffect, useState, useCallback } from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import * as L from 'leaflet';
-import * as signalR from '@microsoft/signalr';
-import 'leaflet/dist/leaflet.css';
+import { useState } from "react";
+import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+import { FilterProvider } from "./context/FilterContext";
+import { BusMap } from "./components/BusMap";
+import { FilterMenu } from "./components/FilterMenu";
+import "./App.css";
 
-delete ((L as any).Icon.Default.prototype as any)._getIconUrl;
-(L as any).Icon.Default.mergeOptions({
-  iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
-  iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
-  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: 1,
+      refetchOnWindowFocus: false,
+    },
+  },
 });
 
-interface VehicleDto {
-  vehicleId: string;
-  routeShortName: string;
-  latitude: number;
-  longitude: number;
-  speed: number;
-}
-
-function App() {
-  const [vehicles, setVehicles] = useState<VehicleDto[]>([]);
-  const [connection, setConnection] = useState<signalR.HubConnection | null>(null);
-
-  const connectToSignalR = useCallback(async () => {
-    const newConnection = new signalR.HubConnectionBuilder()
-      .withUrl('https://localhost:5001/hubs/vehicles')
-      .withAutomaticReconnect()
-      .build();
-
-    newConnection.on('VehiclesUpdated', (data: VehicleDto[]) => {
-      console.log('Vehicles updated:', data);
-      setVehicles(data);
-    });
-
-    try {
-      await newConnection.start();
-      console.log('SignalR Connected');
-      setConnection(newConnection);
-    } catch (err) {
-      console.error('SignalR Connection Error: ', err);
-    }
-  }, []);
-
-  useEffect(() => {
-    connectToSignalR();
-
-    return () => {
-      connection?.stop();
-    };
-  }, [connectToSignalR]);
-
-  const position: [number, number] = [50.633, 5.567];
+export function App() {
+  const [filterOpen, setFilterOpen] = useState(false);
 
   return (
-    <div style={{ height: '100vh', width: '100vw' }}>
-      <div style={{ 
-        position: 'absolute', 
-        top: 10, 
-        left: 10, 
-        background: 'white', 
-        padding: 10, 
-        borderRadius: 5,
-        zIndex: 1000 
-      }}>
-        <div>Bus en direct: {vehicles.length}</div>
-      </div>
-      
-      <MapContainer
-        {...({ center: position, zoom: 13, style: { height: '100%', width: '100%' } } as any)}
-      >
-        <TileLayer
-          {...({ url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>' } as any)}
-        />
-        
-        {vehicles.map((vehicle) => (
-          <Marker 
-            key={vehicle.vehicleId} 
-            position={[vehicle.latitude, vehicle.longitude]}
-          >
-            <Popup>
-              <strong>Bus {vehicle.vehicleId}</strong><br />
-              Ligne: <span style={{color: 'blue'}}>{vehicle.routeShortName}</span><br />
-              Vitesse: <strong>{vehicle.speed.toFixed(1)} km/h</strong>
-            </Popup>
-          </Marker>
-        ))}
-      </MapContainer>
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <FilterProvider>
+        {/* Unified Layout - Full screen map with floating button */}
+        <div className="h-screen bg-dark-950">
+          {/* Map - Full screen */}
+          <div className="h-full relative">
+            <BusMap />
+
+            {/* Floating Settings Button */}
+            <button
+              onClick={() => setFilterOpen(true)}
+              className="absolute bottom-8 right-6 z-[1000] glass glass-hover rounded-2xl p-4 shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95"
+              style={{ 
+                pointerEvents: 'auto',
+                background: 'linear-gradient(135deg, rgba(96, 165, 250, 0.2) 0%, rgba(167, 139, 250, 0.2) 100%)',
+              }}
+              title="Paramètres"
+            >
+              <svg className="w-7 h-7 text-accent-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+              </svg>
+            </button>
+          </div>
+
+          {/* Unified Filter Menu (Mobile & Desktop) */}
+          <FilterMenu isOpen={filterOpen} onClose={() => setFilterOpen(false)} />
+        </div>
+      </FilterProvider>
+    </QueryClientProvider>
   );
 }
 

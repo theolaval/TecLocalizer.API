@@ -1,0 +1,63 @@
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio cache/options
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# ReSharper
+_ReSharper*/
+*.resharper
+*.resharper.user
+
+# Node.js
+node_modules/
+npm-debug.log
+npm-debug.log.*
+package-lock.json
+yarn.lock
+.npm
+dist/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+*.swp
+*.swo
+*~
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Database
+*.db
+*.sqlite
+*.mdf
+*.ldf
+
+# Project specific
+publish/
+/publish/
+wwwroot/dist/
