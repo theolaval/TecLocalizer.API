@@ -4,9 +4,6 @@ using TecLocalizer.DL.Enums;
 
 namespace TecLocalizer.BLL.Services;
 
-/// <summary>
-/// Service de positions des véhicules avec polling background
-/// </summary>
 public class VehiclePositionService : IVehiclePositionService, IHostedService
 {
     private readonly IGtfsService _gtfsService;
@@ -17,7 +14,6 @@ public class VehiclePositionService : IVehiclePositionService, IHostedService
     private List<VehicleDto> _cachedVehicles = new();
     private readonly object _cacheLock = new();
     
-    // Configuration
     private const int PollingIntervalSeconds = 30;
 
     public DateTime LastUpdateTime => _lastUpdateTime;
@@ -103,7 +99,6 @@ public class VehiclePositionService : IVehiclePositionService, IHostedService
         }
     }
 
-    // IHostedService implementation
     public async Task StartAsync(CancellationToken cancellationToken)
     {
         await _gtfsService.InitializeAsync();

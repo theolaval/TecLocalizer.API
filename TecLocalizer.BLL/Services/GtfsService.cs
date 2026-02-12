@@ -6,10 +6,6 @@ using Route = TecLocalizer.DL.Models.Route;
 
 namespace TecLocalizer.BLL.Services;
 
-/// <summary>
-/// Service GTFS pour récupérer les arrêts et routes
-/// Implémentation avec données mockées pour le prototype
-/// </summary>
 public class GtfsService : IGtfsService
 {
     private List<Stop> _stops = new();
@@ -28,8 +24,6 @@ public class GtfsService : IGtfsService
     {
         try
         {
-            // TODO: Charger depuis API GTFS réelle
-            // Pour maintenant, utiliser données mockées
             _stops = GetMockStops();
             _routes = GetMockRoutes();
             _lastUpdateTime = DateTime.UtcNow;
@@ -67,7 +61,6 @@ public class GtfsService : IGtfsService
 
     public Task<List<VehicleDto>> GetVehiclePositionsAsync(Province? province = null)
     {
-        // Générées dynamiquement avec petites variations
         var vehicles = GenerateMockVehiclePositions();
         
         if (province.HasValue && province.Value != Province.All)
